@@ -1,6 +1,10 @@
 #include <iostream>
 using namespaece std;
 int main(){
+string nama;
+cout<< " masukan nama";
+cin >> nama;
+cout<< halo ;
 
 return 0;
 }
