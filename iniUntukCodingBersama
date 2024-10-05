@@ -1,4 +1,14 @@
-//bagian khai
+#include <iostream>
+#include <ctime>
+using namespace std;
+
+void drawBoard(char *Spaces);
+void playerMove(char *spaces, char player);
+void computerMove(char *spaces, char computer);
+bool checkWinner(char *spaces, char payer, char computer);
+bool checkTie(char *spaces);
+
+int main(){
 //bagian herdi
 //bawah ini faqih
 // Fungsi untuk mengecek apakah ada pemenang
@@ -43,6 +53,10 @@ bool checkTie(char *spaces){
             return false;
         }
     }
-    std::cout << "IT'S A TIE!\n"; // Jika semua terisi dan tidak ada pemenang, seri
+
+    cout << "IT'S A TIE!\n"; // Jika semua terisi dan tidak ada pemenang, seri
     return true;
 }
+
+return 0;
+    }
