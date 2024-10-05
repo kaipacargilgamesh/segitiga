@@ -6,5 +6,7 @@ cout<< " masukan nama";
 cin >> nama;
 cout<< halo ;
 
+
+cout<< "eh bisa deng";
 return 0;
 }
