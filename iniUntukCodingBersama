@@ -53,6 +53,19 @@ void playerMove(char *spaces, char player){
 };
 
 //bagian herdi
+void computerMove(char*space, char computer) { 
+int number;
+srand(time(0));
+
+while(true) { 
+number = rand() % 9;
+if (space [number]=''){
+space[number]=komputer;
+break;
+    }
+  }
+}
+
 //bawah ini faqih
 // Fungsi untuk mengecek apakah ada pemenang
 bool checkWinner(char *spaces, char player, char computer){
