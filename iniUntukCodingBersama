@@ -66,13 +66,13 @@ void playerMove(char *spaces, char player) {
         cout << "Masukkan angka pilihan anda antara 1 sampai 9 untuk memulai permainan ini: ";
         cin >> number;
         number--;
-        if (spaces[number] == ' ') {  // Jika kotak masih kosong, isi dengan 'X'
+        if (spaces[number] == ' ') {  //kalo ada kotak kosong, isi dengan 'X'
             spaces[number] = player;
             break;
         } else {
             cout << "Kotak sudah terisi, pilih kotak lain.\n";
         }
-    } while (number < 0 || number > 8);  // Pastikan nomor valid (antara 1 sampai 9)
+    } while (number < 0 || number > 8);  // pastiin nomor valid (antara 1 sampai 9)
 }
 
 // Fungsi untuk gerakan komputer
@@ -81,8 +81,8 @@ void computerMove(char *spaces, char computer) {
     srand(time(0));  // Seed untuk angka acak berdasarkan waktu
 
     while (true) {
-        number = rand() % 9;  // Pilih kotak acak antara 0 dan 8
-        if (spaces[number] == ' ') {  // Jika kotak kosong, isi dengan 'O'
+        number = rand() % 9;  // Pilih kotak bebas antara 0 dan 8
+        if (spaces[number] == ' ') {  //kalo kotak kosong, isi dengan 'O'
             spaces[number] = computer;
             break;
         }
@@ -117,10 +117,10 @@ bool checkWinner(char *spaces, char player, char computer) {
         spaces[2] == player ? std::cout << "YOU WIN!\n" : std::cout << "YOU LOSE!\n";
     }
     else{
-        return false; // Tidak ada pemenang, lanjutkan permainan
+        return false; // ga ada pemenang, lanjutkan permainan
     }
 
-    return true; // Ada pemenang, hentikan permainan
+    return true; // ada yang menang, selesao
 }
 
 // Fungsi untuk mengecek apakah permainan seri
@@ -128,9 +128,9 @@ bool checkTie(char *spaces) {
     // Cek apakah semua kotak sudah terisi
     for (int i = 0; i < 9; i++) {
         if (spaces[i] == ' ') {
-            return false;  // Jika ada kotak kosong, permainan belum berakhir
+            return false;  // kalo ada kotak kosong, permainan belum selesai
         }
     }
-    cout << "IT'S A TIE!\n";  // Semua kotak terisi, tetapi tidak ada pemenang
+    cout << "IT'S A TIE!\n";  // Semua kotakpenuh, tapi ga ada yang menang
     return true;
 }
