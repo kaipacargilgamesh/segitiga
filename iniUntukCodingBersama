@@ -59,7 +59,7 @@ srand(time(0));
 
 while(true) { 
 number = rand() % 9;
-if (space [number]=''){
+if (space [number]=' '){
 space[number]=komputer;
 break;
     }
