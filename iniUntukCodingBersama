@@ -59,3 +59,32 @@ void drawBoard(char *spaces) {
     cout << "   "<<spaces[6]<<" |   "<< spaces[7] <<" |  "<<spaces[8]<<"    " << endl;
     cout << "     |     |      " << endl;
 }
+// Fungsi untuk gerakan pemain
+void playerMove(char *spaces, char player) {
+    int number;
+    do {
+        cout << "Masukkan angka pilihan anda antara 1 sampai 9 untuk memulai permainan ini: ";
+        cin >> number;
+        number--;
+        if (spaces[number] == ' ') {  // Jika kotak masih kosong, isi dengan 'X'
+            spaces[number] = player;
+            break;
+        } else {
+            cout << "Kotak sudah terisi, pilih kotak lain.\n";
+        }
+    } while (number < 0 || number > 8);  // Pastikan nomor valid (antara 1 sampai 9)
+}
+
+// Fungsi untuk gerakan komputer
+void computerMove(char *spaces, char computer) {
+    int number;
+    srand(time(0));  // Seed untuk angka acak berdasarkan waktu
+
+    while (true) {
+        number = rand() % 9;  // Pilih kotak acak antara 0 dan 8
+        if (spaces[number] == ' ') {  // Jika kotak kosong, isi dengan 'O'
+            spaces[number] = computer;
+            break;
+        }
+    }
+}
