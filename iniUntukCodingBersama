@@ -16,6 +16,21 @@ char spaces[9]={' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '};
     bool running=true;
     drawBoard(spaces);
 
+void drawBoard(char *Spaces){
+    cout<<endl;
+
+    cout<<"     |     |      "<<endl;
+    cout<<"   "scapes[0]"   |   "scapes[1]"   |   "scapes[2]"   "<<endl;
+    cout<<"_____|_____|_____"<<endl;
+    cout<<"     |     |      "<<endl;
+    cout<<"   "scapes[3]"   |   "scapes[4]"   |   "scapes[5]"   "<<endl;
+    cout<<"_____|_____|_____"<<endl;
+    cout<<"     |     |      "<<endl;
+    cout<<"   "scapes[6]"   |   "scapes[7]"   |   "scapes[8]"   "<<endl;
+    cout<<"     |     |      "<<endl;
+};
+
+
 //bagian herdi
 //bawah ini faqih
 // Fungsi untuk mengecek apakah ada pemenang
