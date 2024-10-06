@@ -9,6 +9,13 @@ bool checkWinner(char *spaces, char payer, char computer);
 bool checkTie(char *spaces);
 
 int main(){
+
+char spaces[9]={' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '};
+    char player= 'X';
+    chat computer='O';
+    bool running=true;
+    drawBoard(spaces);
+
 //bagian herdi
 //bawah ini faqih
 // Fungsi untuk mengecek apakah ada pemenang
