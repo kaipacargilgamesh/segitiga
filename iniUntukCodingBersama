@@ -23,7 +23,7 @@ char spaces[9]={' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '};    //char ini koso
 
 //buat papan permainan tic tac toe dulu
 //panggil array spaces kedalam papan agar nilai dapat dimasukkan
-void drawBoard(char *Spaces){
+void drawBoard(char *Spaces);{
     cout<<endl;
 
     cout<<"     |     |      "<<endl;
@@ -37,7 +37,7 @@ void drawBoard(char *Spaces){
     cout<<"     |     |      "<<endl;
 };
 
-void playerMove(char *spaces, char player){
+void playerMove(char *spaces, char player);{
     int number;
     do{
         cout<<"Masukkan angka pilihan anda antara 1 sampai 9 untuk memulai permainan ini : \n";    
@@ -50,7 +50,7 @@ void playerMove(char *spaces, char player){
     }while(!number > 0 || !number < 8);            //ini maksudnya adalah program hanya akan berjalan jika angka yang dimasukkan antara 1 sampai 9
 
 
-};
+}
 
 //bagian herdi
 void computerMove(char*space, char computer) { 
