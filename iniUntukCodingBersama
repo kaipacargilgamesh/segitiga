@@ -12,12 +12,12 @@ int main(){
 
 char spaces[9]={' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '};    //char ini kosong karena nantinya akan menerima input
     char player= 'X';
-    chat computer='O';
+    char computer='O';
     bool running=true;
 
     drawBoard(spaces);
     while(running){
-        playerMove(spaces, player)
+        playerMove(spaces, player);
         drawBoard(spaces);
     }
 
