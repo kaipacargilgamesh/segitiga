@@ -2,9 +2,9 @@
 #include <ctime>
 using namespace std;
 
-void drawBoard(char *Spaces)
-void playerMove(char *spaces, char player)
-void computerMove(char *spaces, char computer)
+void drawBoard(char *Spaces) {
+void playerMove(char *spaces, char player);
+void computerMove(char *spaces, char computer);
 bool checkWinner(char *spaces, char payer, char computer);
 bool checkTie(char *spaces);
 
@@ -30,14 +30,14 @@ void drawBoard(char *Spaces);{
     cout<<"   "spaces[0]"   |   "spaces[1]"   |   "spaces[2]"   "<<endl;
     cout<<"_____|_____|_____"<<endl;
     cout<<"     |     |      "<<endl;
-    cout<<"   "spaces[3]"   |   "spaces[4]"   |   "scapes[5]"   "<<endl;
+    cout<<"   "spaces[3]"   |   "spaces[4]"   |   "spaces[5]"   "<<endl;
     cout<<"_____|_____|_____"<<endl;
     cout<<"     |     |      "<<endl;
     cout<<"   "spaces[6]"   |   "spaces[7]"   |   "spaces[8]"   "<<endl;
     cout<<"     |     |      "<<endl;
-};
+}
 
-void playerMove(char *spaces, char player);{
+void playerMove(char *spaces, char player) {
     int number;
     do{
         cout<<"Masukkan angka pilihan anda antara 1 sampai 9 untuk memulai permainan ini : \n";    
@@ -115,4 +115,4 @@ bool checkTie(char *spaces){
 }
 
 return 0;
-    }
+    
