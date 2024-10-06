@@ -10,12 +10,19 @@ bool checkTie(char *spaces);
 
 int main(){
 
-char spaces[9]={' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '};
+char spaces[9]={' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '};    //char ini kosong karena nantinya akan menerima input
     char player= 'X';
     chat computer='O';
     bool running=true;
-    drawBoard(spaces);
 
+    drawBoard(spaces);
+    while(running){
+        playerMove(spaces, player)
+        drawBoard(spaces);
+    }
+
+//buat papan permainan tic tac toe dulu
+//panggil array spaces kedalam papan agar nilai dapat dimasukkan
 void drawBoard(char *Spaces){
     cout<<endl;
 
@@ -30,6 +37,20 @@ void drawBoard(char *Spaces){
     cout<<"     |     |      "<<endl;
 };
 
+void playerMove(char *spaces, char player){
+    int number;
+    do{
+        cout<<"Masukkan angka pilihan anda antara 1 sampai 9 untuk memulai permainan ini : \n";    
+        cin>>number;
+        number--;
+        if(spaces[number] == ' '){                //ini untuk menginput char yang dilakukan pemain. setelah memilih nomor antara 1 sampai 9,
+            spaces[number]== player;              //program akan mengeluarkan char 'X' sebagai tanda milik pemain. 
+            break;
+        }
+    }while(!number > 0 || !number < 8);            //ini maksudnya adalah program hanya akan berjalan jika angka yang dimasukkan antara 1 sampai 9
+
+
+};
 
 //bagian herdi
 //bawah ini faqih
